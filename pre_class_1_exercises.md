@@ -82,3 +82,17 @@ ggplot(cars, aes(gear, mpl, fill = gear))+
     ## No summary function supplied, defaulting to `mean_se()
 
 ![](pre_class_1_exercises_files/figure-markdown_github/unnamed-chunk-1-1.png)
+
+``` r
+#Plot 2 to test for new visualization
+
+ggplot(cars, aes(gear, carb, fill = gear))+
+  geom_bar(stat="summary")+
+  scale_fill_manual(values = c("skyblue", "royalblue", "navy"))+
+  geom_errorbar(stat= "summary", fun.data = mean_se, width = 0.3)+
+  theme(legend.position = "none")
+```
+
+    ## No summary function supplied, defaulting to `mean_se()
+
+![](pre_class_1_exercises_files/figure-markdown_github/unnamed-chunk-1-2.png)

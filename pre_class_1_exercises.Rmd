@@ -76,6 +76,15 @@ ggplot(cars, aes(gear, mpl, fill = gear))+
   geom_errorbar(stat= "summary", fun.data = mean_se, width = 0.3)+
   theme(legend.position = "none")
 
+
+
+#Plot 2 to test for new visualization
+
+ggplot(cars, aes(gear, carb, fill = gear))+
+  geom_bar(stat="summary")+
+  scale_fill_manual(values = c("skyblue", "royalblue", "navy"))+
+  geom_errorbar(stat= "summary", fun.data = mean_se, width = 0.3)+
+  theme(legend.position = "none")
 ```
 
 
